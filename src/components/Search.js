@@ -1,16 +1,18 @@
 import React from "react";
 
-import clear from "../img/weather-icons/clear.svg";
-import "./Search.css";
 class Search extends React.Component {
-  state = {
-    input: ""
-  };
+  // state = {
+  //   input: ""
+  // };
 
   render() {
     return (
       <div>
-        {this.state.input}
+              <div className="navbar">
+        <input type="search" placeholder="type a city name" />
+        <button >Find weather</button>
+      </div>
+        {/* {this.state.input}
         <input
           type="text"
           id="input-name"
@@ -24,7 +26,7 @@ class Search extends React.Component {
           }}
         >
           Say Hello
-        </button>
+        </button> */}
       </div>
     );
   }

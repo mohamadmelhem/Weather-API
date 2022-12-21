@@ -1,16 +1,19 @@
 import React from "react";
+import "./Search"
 
 class Search extends React.Component {
-  // state = {
-  //   input: ""
-  // };
+  state = {
+    input: ""
+  };
 
   render() {
     return (
-      <div>
+      <div className='Search'>
               <div className="navbar">
-        <input type="search" placeholder="type a city name" />
-        <button >Find weather</button>
+        <input onChange={e => this.setState({input: e.target.value})}
+        type="search" placeholder="type a city name" />
+        <button onClick={e => {
+            this.props.event(this.state.input);}} >Find weather</button>
       </div>
         {/* {this.state.input}
         <input

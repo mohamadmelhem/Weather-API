@@ -16,7 +16,9 @@ class App extends Component {
       isLoaded: false,
       melhem: FakeWeatherData,
     }
+    
   }
+  
   fetchData = (n) => {
     console.log(n)
     let key='55229a9d8ce6b656375eedca5a3be0ca'
@@ -37,8 +39,8 @@ class App extends Component {
        <Search event={this.handleInputChange} />
 
       <div className="main">
-        {this.state.isLoaded && <WeatherItem mainData={this.state.melhem.list[0]} />}
-        {this.state.isLoaded && <WeatherDetails data={this.state.melhem} />}
+        {this.state.isLoaded && <WeatherItem mainData={this.state.melhem.list[0]}  img={this.props.mainData}/>}
+        {this.state.isLoaded && <WeatherDetails data={this.state.melhem} img={this.props.data}/>}
       </div>
     </div>
 
